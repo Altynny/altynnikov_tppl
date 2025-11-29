@@ -1,6 +1,6 @@
 Все данные ниже команды нужно запускать из корневой директории директории модуля ```/cow```
 # Использование
-Запуск демонстрации работы интерпретатора на примере [hello.cow](cow_examples\hello.cow) с выводом "Hello, World!":
+Запуск демонстрации работы интерпретатора на примере [hello.cow](cow_examples/hello.cow) с выводом "Hello, World!":
 ```
 go run main.go
 ```
@@ -18,4 +18,5 @@ go test ./interpreter -coverprofile=cover
 Составление отчёта покрытия в формате html по файлу ```cover```:
 ```
 go tool cover -html=cover
+
 ```
