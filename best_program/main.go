@@ -14,6 +14,7 @@ type SensorData struct {
 }
 
 func (s SensorData) GetTimeStamp() uint64 { return s.TimeStamp }
+func (s SensorData) GetString() string    { return fmt.Sprintf("%f, %d", s.Temp, s.Pressure) }
 
 type CoordsData struct {
 	TimeStamp uint64
@@ -21,6 +22,7 @@ type CoordsData struct {
 }
 
 func (s CoordsData) GetTimeStamp() uint64 { return s.TimeStamp }
+func (s CoordsData) GetString() string    { return fmt.Sprintf("%d, %d, %d", s.X, s.Y, s.Z) }
 
 func main() {
 	SensorNw := network.NetworkWorker{Address: "95.163.237.76:5123", PackageSize: 15}
